@@ -1,0 +1,124 @@
+From f54593d794747a4e5360964c7d42c7eba2f2c6be Mon Sep 17 00:00:00 2001
+From: Charisma <actuallycharisma@outlook.com>
+Date: Thu, 8 Aug 2024 14:21:16 +0100
+Subject: [PATCH 1/3] added python files
+
+---
+ .DS_Store                                      | Bin 0 -> 6148 bytes
+ client3.py => pythonProject/client3.py         |   0
+ client_test.py => pythonProject/client_test.py |   0
+ server3.py => pythonProject/server3.py         |   0
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .DS_Store
+ rename client3.py => pythonProject/client3.py (100%)
+ rename client_test.py => pythonProject/client_test.py (100%)
+ rename server3.py => pythonProject/server3.py (100%)
+
+diff --git a/.DS_Store b/.DS_Store
+new file mode 100644
+index 0000000000000000000000000000000000000000..4acc699fa4afbed67cfb329fac4eaf591ecb8785
+GIT binary patch
+literal 6148
+zcmeHK%Wl&^6upy%cC4zB7a(;x5<3VGQXWDqYC^hTfrM%V3qT=`Eo$n_gxG07Q6#Tn
+z$<Od5{0CnEXC8&5fi4k3bEP}y&iEW#K4W`4M8vw&^d?bAL>#HH5uo`^=;J!qqTxn1
+zfy|skk)$UyAw_T3*nZ$&bU@GD4vpypRdj@T`!#<V4XJums9{p51T6iC>?5yyH-YM0
+zWil(rPWdGn7kOE=+h18@qj_O-i*vrsU&Tji7FUC6T6PDM7rOUUsUkV82g$QMoAtws
+z50$J2xy&X;kf#|aFQ4Z!RkN;|%Ct1v*dE|P5cI>{`Mh)cZcB99okdH`?{(TOacl3+
+zViE95mv7uZ>>n2+sXm%}Ackkx#E!#L_=MsdZ%*QgER=i$mOev3hjc&>s7H^1*J(uQ
+z8TUSeb#=+T5N}FG?`TT7sYd8Y%tHxvMeo<#{|5culAeQ=fn9+=1fHy3kBz~<w!}x*
+zhj+j`;2kgyxbGg{_I`K=yaV2WGY;tQgFtGG9M%@irvr`I0sxyBHi26IC~A#x7&)vh
+z;s}CSDbPxp+hQ;)$GC93$YE{K%89wn2Xj|uZim9m)p34d=)@w6zV!}x2UZ=}u-#Cv
+z{|A5G|F4RC&pY59_^%vb&0gH=;+EXnx^{DVtrf`ENFAD2Tl^_OVU}WW^-{cxG=XuU
+X3t;51wuljg{}C`Y_{KZ%R~`5Px-g1Y
+
+literal 0
+HcmV?d00001
+
+diff --git a/client3.py b/pythonProject/client3.py
+similarity index 100%
+rename from client3.py
+rename to pythonProject/client3.py
+diff --git a/client_test.py b/pythonProject/client_test.py
+similarity index 100%
+rename from client_test.py
+rename to pythonProject/client_test.py
+diff --git a/server3.py b/pythonProject/server3.py
+similarity index 100%
+rename from server3.py
+rename to pythonProject/server3.py
+-- 
+2.46.0
+
+
+From 7130196148c041bd4f954826e205085dbb2fb4e2 Mon Sep 17 00:00:00 2001
+From: Charisma <actuallycharisma@outlook.com>
+Date: Thu, 8 Aug 2024 14:23:58 +0100
+Subject: [PATCH 2/3] added changes to getDataPoint function
+
+---
+ pythonProject/client3.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pythonProject/client3.py b/pythonProject/client3.py
+index 3fc09b7..774145a 100644
+--- a/pythonProject/client3.py
++++ b/pythonProject/client3.py
+@@ -35,7 +35,7 @@ def getDataPoint(quote):
+     stock = quote['stock']
+     bid_price = float(quote['top_bid']['price'])
+     ask_price = float(quote['top_ask']['price'])
+-    price = bid_price
++    price = (bid_price + ask_price)/2
+     return stock, bid_price, ask_price, price
+ 
+ 
+-- 
+2.46.0
+
+
+From 03dfd1dfc9a89bd14462f55900d459738fb203b0 Mon Sep 17 00:00:00 2001
+From: Charisma <actuallycharisma@outlook.com>
+Date: Thu, 8 Aug 2024 14:46:59 +0100
+Subject: [PATCH 3/3] updated the get ratio function by adding some conditional
+ statements. updated main method, added a dictionary to store stock prices
+
+---
+ pythonProject/client3.py | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/pythonProject/client3.py b/pythonProject/client3.py
+index 774145a..1633ec2 100644
+--- a/pythonProject/client3.py
++++ b/pythonProject/client3.py
+@@ -42,7 +42,15 @@ def getDataPoint(quote):
+ def getRatio(price_a, price_b):
+     """ Get ratio of price_a and price_b """
+     """ ------------- Update this function ------------- """
+-    return 1
++    if not isinstance(price_a, (int, float)):
++        raise ValueError("Price a must be a number")
++    if not isinstance(price_b, (int, float)):
++        raise ValueError("Price b must be a number")
++
++    if price_b == 0:
++        return None
++
++    return price_a/price_b
+ 
+ 
+ # Main
+@@ -52,8 +60,10 @@ if __name__ == "__main__":
+         quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
+ 
+         """ ----------- Update to get the ratio --------------- """
++        prices = {}
+         for quote in quotes:
+             stock, bid_price, ask_price, price = getDataPoint(quote)
++            prices[stock] = price
+             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+-        print("Ratio %s" % getRatio(price, price))
++        print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
+-- 
+2.46.0
+
