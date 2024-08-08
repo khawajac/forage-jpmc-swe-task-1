@@ -1,59 +1,7 @@
-From f54593d794747a4e5360964c7d42c7eba2f2c6be Mon Sep 17 00:00:00 2001
-From: Charisma <actuallycharisma@outlook.com>
-Date: Thu, 8 Aug 2024 14:21:16 +0100
-Subject: [PATCH 1/3] added python files
-
----
- .DS_Store                                      | Bin 0 -> 6148 bytes
- client3.py => pythonProject/client3.py         |   0
- client_test.py => pythonProject/client_test.py |   0
- server3.py => pythonProject/server3.py         |   0
- 4 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 .DS_Store
- rename client3.py => pythonProject/client3.py (100%)
- rename client_test.py => pythonProject/client_test.py (100%)
- rename server3.py => pythonProject/server3.py (100%)
-
-diff --git a/.DS_Store b/.DS_Store
-new file mode 100644
-index 0000000000000000000000000000000000000000..4acc699fa4afbed67cfb329fac4eaf591ecb8785
-GIT binary patch
-literal 6148
-zcmeHK%Wl&^6upy%cC4zB7a(;x5<3VGQXWDqYC^hTfrM%V3qT=`Eo$n_gxG07Q6#Tn
-z$<Od5{0CnEXC8&5fi4k3bEP}y&iEW#K4W`4M8vw&^d?bAL>#HH5uo`^=;J!qqTxn1
-zfy|skk)$UyAw_T3*nZ$&bU@GD4vpypRdj@T`!#<V4XJums9{p51T6iC>?5yyH-YM0
-zWil(rPWdGn7kOE=+h18@qj_O-i*vrsU&Tji7FUC6T6PDM7rOUUsUkV82g$QMoAtws
-z50$J2xy&X;kf#|aFQ4Z!RkN;|%Ct1v*dE|P5cI>{`Mh)cZcB99okdH`?{(TOacl3+
-zViE95mv7uZ>>n2+sXm%}Ackkx#E!#L_=MsdZ%*QgER=i$mOev3hjc&>s7H^1*J(uQ
-z8TUSeb#=+T5N}FG?`TT7sYd8Y%tHxvMeo<#{|5culAeQ=fn9+=1fHy3kBz~<w!}x*
-zhj+j`;2kgyxbGg{_I`K=yaV2WGY;tQgFtGG9M%@irvr`I0sxyBHi26IC~A#x7&)vh
-z;s}CSDbPxp+hQ;)$GC93$YE{K%89wn2Xj|uZim9m)p34d=)@w6zV!}x2UZ=}u-#Cv
-z{|A5G|F4RC&pY59_^%vb&0gH=;+EXnx^{DVtrf`ENFAD2Tl^_OVU}WW^-{cxG=XuU
-X3t;51wuljg{}C`Y_{KZ%R~`5Px-g1Y
-
-literal 0
-HcmV?d00001
-
-diff --git a/client3.py b/pythonProject/client3.py
-similarity index 100%
-rename from client3.py
-rename to pythonProject/client3.py
-diff --git a/client_test.py b/pythonProject/client_test.py
-similarity index 100%
-rename from client_test.py
-rename to pythonProject/client_test.py
-diff --git a/server3.py b/pythonProject/server3.py
-similarity index 100%
-rename from server3.py
-rename to pythonProject/server3.py
--- 
-2.46.0
-
-
 From 7130196148c041bd4f954826e205085dbb2fb4e2 Mon Sep 17 00:00:00 2001
 From: Charisma <actuallycharisma@outlook.com>
 Date: Thu, 8 Aug 2024 14:23:58 +0100
-Subject: [PATCH 2/3] added changes to getDataPoint function
+Subject: [PATCH 1/4] added changes to getDataPoint function
 
 ---
  pythonProject/client3.py | 2 +-
@@ -79,7 +27,7 @@ index 3fc09b7..774145a 100644
 From 03dfd1dfc9a89bd14462f55900d459738fb203b0 Mon Sep 17 00:00:00 2001
 From: Charisma <actuallycharisma@outlook.com>
 Date: Thu, 8 Aug 2024 14:46:59 +0100
-Subject: [PATCH 3/3] updated the get ratio function by adding some conditional
+Subject: [PATCH 2/4] updated the get ratio function by adding some conditional
  statements. updated main method, added a dictionary to store stock prices
 
 ---
@@ -119,6 +67,262 @@ index 774145a..1633ec2 100644
  
 -        print("Ratio %s" % getRatio(price, price))
 +        print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
+-- 
+2.46.0
+
+
+From 66f6c8c279aff96754dbcb3549307b1a1b0bfc0f Mon Sep 17 00:00:00 2001
+From: Charisma <actuallycharisma@outlook.com>
+Date: Thu, 8 Aug 2024 14:54:13 +0100
+Subject: [PATCH 3/4] added a patch file
+
+---
+ multi_commit.patch | 124 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 124 insertions(+)
+ create mode 100644 multi_commit.patch
+
+diff --git a/multi_commit.patch b/multi_commit.patch
+new file mode 100644
+index 0000000..24e7b38
+--- /dev/null
++++ b/multi_commit.patch
+@@ -0,0 +1,124 @@
++From f54593d794747a4e5360964c7d42c7eba2f2c6be Mon Sep 17 00:00:00 2001
++From: Charisma <actuallycharisma@outlook.com>
++Date: Thu, 8 Aug 2024 14:21:16 +0100
++Subject: [PATCH 1/3] added python files
++
++---
++ .DS_Store                                      | Bin 0 -> 6148 bytes
++ client3.py => pythonProject/client3.py         |   0
++ client_test.py => pythonProject/client_test.py |   0
++ server3.py => pythonProject/server3.py         |   0
++ 4 files changed, 0 insertions(+), 0 deletions(-)
++ create mode 100644 .DS_Store
++ rename client3.py => pythonProject/client3.py (100%)
++ rename client_test.py => pythonProject/client_test.py (100%)
++ rename server3.py => pythonProject/server3.py (100%)
++
++diff --git a/.DS_Store b/.DS_Store
++new file mode 100644
++index 0000000000000000000000000000000000000000..4acc699fa4afbed67cfb329fac4eaf591ecb8785
++GIT binary patch
++literal 6148
++zcmeHK%Wl&^6upy%cC4zB7a(;x5<3VGQXWDqYC^hTfrM%V3qT=`Eo$n_gxG07Q6#Tn
++z$<Od5{0CnEXC8&5fi4k3bEP}y&iEW#K4W`4M8vw&^d?bAL>#HH5uo`^=;J!qqTxn1
++zfy|skk)$UyAw_T3*nZ$&bU@GD4vpypRdj@T`!#<V4XJums9{p51T6iC>?5yyH-YM0
++zWil(rPWdGn7kOE=+h18@qj_O-i*vrsU&Tji7FUC6T6PDM7rOUUsUkV82g$QMoAtws
++z50$J2xy&X;kf#|aFQ4Z!RkN;|%Ct1v*dE|P5cI>{`Mh)cZcB99okdH`?{(TOacl3+
++zViE95mv7uZ>>n2+sXm%}Ackkx#E!#L_=MsdZ%*QgER=i$mOev3hjc&>s7H^1*J(uQ
++z8TUSeb#=+T5N}FG?`TT7sYd8Y%tHxvMeo<#{|5culAeQ=fn9+=1fHy3kBz~<w!}x*
++zhj+j`;2kgyxbGg{_I`K=yaV2WGY;tQgFtGG9M%@irvr`I0sxyBHi26IC~A#x7&)vh
++z;s}CSDbPxp+hQ;)$GC93$YE{K%89wn2Xj|uZim9m)p34d=)@w6zV!}x2UZ=}u-#Cv
++z{|A5G|F4RC&pY59_^%vb&0gH=;+EXnx^{DVtrf`ENFAD2Tl^_OVU}WW^-{cxG=XuU
++X3t;51wuljg{}C`Y_{KZ%R~`5Px-g1Y
++
++literal 0
++HcmV?d00001
++
++diff --git a/client3.py b/pythonProject/client3.py
++similarity index 100%
++rename from client3.py
++rename to pythonProject/client3.py
++diff --git a/client_test.py b/pythonProject/client_test.py
++similarity index 100%
++rename from client_test.py
++rename to pythonProject/client_test.py
++diff --git a/server3.py b/pythonProject/server3.py
++similarity index 100%
++rename from server3.py
++rename to pythonProject/server3.py
++-- 
++2.46.0
++
++
++From 7130196148c041bd4f954826e205085dbb2fb4e2 Mon Sep 17 00:00:00 2001
++From: Charisma <actuallycharisma@outlook.com>
++Date: Thu, 8 Aug 2024 14:23:58 +0100
++Subject: [PATCH 2/3] added changes to getDataPoint function
++
++---
++ pythonProject/client3.py | 2 +-
++ 1 file changed, 1 insertion(+), 1 deletion(-)
++
++diff --git a/pythonProject/client3.py b/pythonProject/client3.py
++index 3fc09b7..774145a 100644
++--- a/pythonProject/client3.py
+++++ b/pythonProject/client3.py
++@@ -35,7 +35,7 @@ def getDataPoint(quote):
++     stock = quote['stock']
++     bid_price = float(quote['top_bid']['price'])
++     ask_price = float(quote['top_ask']['price'])
++-    price = bid_price
+++    price = (bid_price + ask_price)/2
++     return stock, bid_price, ask_price, price
++ 
++ 
++-- 
++2.46.0
++
++
++From 03dfd1dfc9a89bd14462f55900d459738fb203b0 Mon Sep 17 00:00:00 2001
++From: Charisma <actuallycharisma@outlook.com>
++Date: Thu, 8 Aug 2024 14:46:59 +0100
++Subject: [PATCH 3/3] updated the get ratio function by adding some conditional
++ statements. updated main method, added a dictionary to store stock prices
++
++---
++ pythonProject/client3.py | 14 ++++++++++++--
++ 1 file changed, 12 insertions(+), 2 deletions(-)
++
++diff --git a/pythonProject/client3.py b/pythonProject/client3.py
++index 774145a..1633ec2 100644
++--- a/pythonProject/client3.py
+++++ b/pythonProject/client3.py
++@@ -42,7 +42,15 @@ def getDataPoint(quote):
++ def getRatio(price_a, price_b):
++     """ Get ratio of price_a and price_b """
++     """ ------------- Update this function ------------- """
++-    return 1
+++    if not isinstance(price_a, (int, float)):
+++        raise ValueError("Price a must be a number")
+++    if not isinstance(price_b, (int, float)):
+++        raise ValueError("Price b must be a number")
+++
+++    if price_b == 0:
+++        return None
+++
+++    return price_a/price_b
++ 
++ 
++ # Main
++@@ -52,8 +60,10 @@ if __name__ == "__main__":
++         quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
++ 
++         """ ----------- Update to get the ratio --------------- """
+++        prices = {}
++         for quote in quotes:
++             stock, bid_price, ask_price, price = getDataPoint(quote)
+++            prices[stock] = price
++             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
++ 
++-        print("Ratio %s" % getRatio(price, price))
+++        print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
++-- 
++2.46.0
++
+-- 
+2.46.0
+
+
+From 7132c20e6b262d7710cc6ade52bab01a21e2ff4c Mon Sep 17 00:00:00 2001
+From: Charisma <actuallycharisma@outlook.com>
+Date: Thu, 8 Aug 2024 16:30:02 +0100
+Subject: [PATCH 4/4] added a an assertion to test the
+ getDataPoint_calculatePrice
+
+---
+ .../__pycache__/client3.cpython-312.pyc          | Bin 0 -> 1978 bytes
+ .../__pycache__/client_test.cpython-312.pyc      | Bin 0 -> 1845 bytes
+ pythonProject/client_test.py                     |  14 ++++++++++++--
+ 3 files changed, 12 insertions(+), 2 deletions(-)
+ create mode 100644 pythonProject/__pycache__/client3.cpython-312.pyc
+ create mode 100644 pythonProject/__pycache__/client_test.cpython-312.pyc
+
+diff --git a/pythonProject/__pycache__/client3.cpython-312.pyc b/pythonProject/__pycache__/client3.cpython-312.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..ef5c6136715e4ec2c6db443b9edfe8d4e29d0f0d
+GIT binary patch
+literal 1978
+zcmb6aOKcNIbjJI!9e;w8*yQ838>F<DCNbYaqfnF*r{X}A(1MCZS*^X3WR1ORcGpF5
+zjTE6Cj8s)dJz!L|rHBI+7m$#OdZO*2hxQQTBHV#PP*2<f>4{U{tZhgYs;VRHdvD&n
+z_vU?Pe+>jW5Ujv&x8_a)^(Wi3SD;0#UBL)lL@H8o7A2b)C$Y14B{|iV<W(*ysQjlW
+zDXIcMH}R<AsjUc^w_J#L;p-s6b+E!#8&9H-t{{~3!70l0HqX{W!e#o`@0)bym5n^Y
+zXI|UL1-m%o+Q`4&VzvEf<ILcH%O*o!q@iRN34!-9@V*;v5lMI3#t9yHJ;`t~lH5!-
+zlP=OT4n{$yS9Oz~FR|(&VSru|0oXw{1N436ZEIun*_(V*+7CKz(xnFaKp$|B;p?qv
+zisFkbg3eVQE#gHS>wL@tm@W=3*miy_9?u$SCA(l)_SnAd`?kkV7l^rdKvVaBa#s5b
+zYLRZ$gDD~K8*%Wh=>RSwFDgN`*_~&x{ag-sF2++i$D0=atm_{V{7WRblB>iOnWj+m
+zfla=I8K=b0@$aLUSllbkn1)(N6G_QtC3}HLIw2}irH_?tfmo7lNb^J|recGHq$;+O
+zH#FUrs9@Pf`V@8BMqW;7Di!jkmL|=;Vx4--5*EW$n9CZ99TTW<x?tGEWYJPDD9BBD
+zFUU4Y6H<#T0f5BTGdX_LBBm8r)SRZrCyjI=M|9hY=YeVHN*1(?3`qlL&M=jE(n2Gd
+zd@em=ogpJOm>$^?&o9~wh7M6O;dnZ$ft6jO`9<oVC-x)+G{XWigY07F!3O}A&<a1^
+z@P{gIoS$AwJlqtnkm{jY<n_yEYLR$-)Apr9FXJ@=k!oKpu;ubZ%|Eo1X!tf&V%6i<
+zgk|5zGC#5gc2Ro$RIpf`%6|<6tNi+E+Rr6zmNRF~x!Qeb`D}NatKxPSpIhHC_<vY%
+zy|7TiD(Ac(c#$um5@uZkogx&sNbeC_f=18`$(WOz^2v&%=xU2jNyXk7)&$Tfxq@X&
+zDMsmqT#A_OlhlS2lf^k5<7tOxX}V=AI&=}oD&mC$+Hs8aVZt;GGv=c1)~#(KWif3@
+zGTDPkJy6gi%s(>%+imb!hXFXneCP{T=C5*Bk5)^+`-UF|dzbrm)q}g2J-h$?WW^n<
+z44x}BI=feVU6sA(4=nTjW~XzLEawzWm*t{+mbJAi6}^&TOIx9_$BN>x1g$q#^b9vM
+zGxiL}iXO)^X~?47#JdM6H<_4<^-(?py-Y<DvS{RJuwZ7hT58lJ@M2gt6`Ol1%pOe~
+zIZpAk)1^*y)FaEfk|VNAc@5@@3SeWNP%KjcCQh}eyKTh{R*XD>YhX}vicNWwC@K}5
+zfwZXT<kT|R-^dwH6Dp2OKLczeoypei?~oI^lj&!k@f<uFS@MoK3KHx!vK|3g<uJx;
+z+Yt6YK!FD+yecB^@R9&X@GRk{q8pDs?eXD()mIVkFBk7}eUAd63qw`>#n#VHmT@CA
+zQ0ckYf1$rR_09C9>HE>0wdl?pd%hpPIesT_NBkx5W8mk``mULJboPGqSS@<29{sQ$
+zI$jo6JO>-0?y~qGJWx*jv19*jQr|II^N*GjmA9+fwQwUkSe~lvIe(b?Lq8OL((cYC
+z@19VWyHfZ3=~Xw1M4xmZZ?K%XwD0oNwLRY+zVX)Wp_}{b0~592#68cuPr@h|T@_HP
+G`hNrH6YUlN
+
+literal 0
+HcmV?d00001
+
+diff --git a/pythonProject/__pycache__/client_test.cpython-312.pyc b/pythonProject/__pycache__/client_test.cpython-312.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..0001230e7cad967fad4db9a44e7d4934564e2ebe
+GIT binary patch
+literal 1845
+zcmbVMNlY787=H6+2Ajoz9a0uS>d-~CTH}QfLPQCRSq@=|LX}{ZPABsQW4w%+8H4PS
+zib|m7&_jF5C5IeANL3F#<k)+uWVeS{6IE)}N(iL~6VeN({{Pq!q*WEQPnz$4-@m-&
+zpZ|Z~yIgeyM&Iw>E`22u@*9#D1GqhoGa&90Mi`eQQIs^vrD&9Lgpx_Z_$|T&m8{fM
+z{m+O!zCxmcDl#$g4k5aS67X#}<5ZpQRV7DqT#obA93r3baaKc2H6yYq&uQ_rsZ_me
+z!Bxp|8%*xQx>1giC}rFhiSmpB3OU{<SaoB`xSBTSRl`(X#9%1i9Zz_?4*)mh7-jqe
+z$^<5|8hhqoPFDLsWOb~*YH47us-+PvF?yG)B^z9XERGU#mu`@ivpc}LILvAu2-%=}
+zRr>~IP3>R<*^H98tIYEf`&U~YW6tI430V^MC=eJN`642a9Pzcx#D3U^as8v=!#BaO
+zOD!>@#}(BQjCfu>=?Diy1O8yx9}0QH;j6*RS9^m!ef{A}eZ2>-Z$G{9=mG?$An>Fy
+z*b@p44D?^RJka0YAF}w7(Xn08a+q31l8uB_YsOQMS2>lb=<dXsMd1?-Q&SQLf51}P
+z30O>k#SW%^&9{8LzBqh%1DM4}#wYaiFw@T=)FQY64)HcVYSqhzq3Y)NYF19_m_Z*8
+z$5)d}R?TWwGgZS9D-vy9ulGa=d;kGPKxV0UIuOy6Yzlt65y*g2OUp?qqiZXw0-7aF
+zmt$&G_*XJ1#c!;ueiLrw4+Szgb6HEzRh$EgT|5%(XZB=rmKP_|*_xCTIjLlmvZ>Bt
+ziu3QDmRrxOoUzG_rvRJem(Ghj;i9Lf)DkRpcJGW8J;9QztJHk{s8(>amg`8@8#^PX
+z_R*pzaMtdsZ>-szD7O)D=!v`ao>+1=Ja)Dfoox>~AF4mKzqgb9=GN|~kFwt_6tB$|
+z=57_Q-7Z9>!pHGqbfu8ci&3Mn_DLCPn46$SgsgLu6xbA<t*|*{H|cE@3-k^uZ&C#r
+zqlpSjRy>oaOj8Zn8mA!(WayuS)UMJao_N}h;kx9dMs$F}Zp1;D{QpLT!f&b;{{G^y
+zj;rcU1ZWbX<C~+q5E>Dh5SkHQLuf_7cSOhb(>nlmp$PRZWETJotV*v}_kyrOullc}
+zaW<)|P!jt5vYZ|<68XXZP!<1(#v>YOfYUN5yuVP$tU+=|XarLo<Hj-7({vHVGEJe<
+zk)~KnST<+;$1462bi7VKL=mI*-*cpBS>)|PazY{L-LU11Pqdtpl$KMfBw2Nml+su>
+ziSq_Y!rrV{^o!uDzlDG=jvZ<zOUD|w0p9?_1F%J&(I$SCKI<0wp>i|fuT<R86ZcBV
+z@w6oQ9F{Yij+>Zk%TZ~=Ui%@iob#X?lcC$~#oxv_0i*u5_la|`a@rxi2Ym49HTnU{
+zJjZcQNYl^6`&{VYu6)_{*xg-pcRwdU%7a8`xR?KtZ!Zb%&8g3)Kbzj3E%QX^uuu6H
+DTcO<C
+
+literal 0
+HcmV?d00001
+
+diff --git a/pythonProject/client_test.py b/pythonProject/client_test.py
+index af2bf26..cd907ef 100644
+--- a/pythonProject/client_test.py
++++ b/pythonProject/client_test.py
+@@ -4,10 +4,20 @@ from client3 import getDataPoint
+ class ClientTest(unittest.TestCase):
+   def test_getDataPoint_calculatePrice(self):
+     quotes = [
+-      {'top_ask': {'price': 121.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
+-      {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
++      {'top_ask': {'price': 121.2, 'size': 36},
++       'timestamp': '2019-02-11 22:06:30.572453',
++       'top_bid': {'price': 120.48, 'size': 109},
++       'id': '0.109974697771',
++       'stock': 'ABC'},
++      {'top_ask': {'price': 121.68, 'size': 4},
++       'timestamp': '2019-02-11 22:06:30.572453',
++       'top_bid': {'price': 117.87, 'size': 81},
++       'id': '0.109974697771',
++       'stock': 'DEF'}
+     ]
+     """ ------------ Add the assertion below ------------ """
++    for quote in quotes:
++        self.assertEqual(getDataPoint(quote), (quote['stock'], quote['top_bid']['price'], quote['top_ask']['price'], (quote['top_bid']['price'] + quote['top_ask']['price'])/2))
+ 
+   def test_getDataPoint_calculatePriceBidGreaterThanAsk(self):
+     quotes = [
 -- 
 2.46.0
 
